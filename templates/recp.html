@@ -1,0 +1,149 @@
+<html lang="en">
+    {%load static%}
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="new.css">
+      
+      <title>smc clinic receptionist window</title>
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body {
+            background-image: url("{% static 'empty.jpg' %}");
+            background-size:100%;
+            background-position:center;
+            
+        }
+        
+  
+        
+        button{
+          border: none;
+          cursor: pointer;
+          appearance: none;
+          background-color: inherit;
+          
+          transition: transform .7s ease-in-out;
+          margin-left:10px;
+  
+        }
+       
+        img{
+          width: 70px;
+          height: 70px;
+        }
+        h1{
+            text-align:center;
+            
+            padding:20px;
+            font-family:'Times New Roman';
+        }
+        
+        
+     
+        .GFG {
+            background-color:inherit;
+            
+            border: 2px solid black;
+            color: rgb(0, 0, 0);
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-table;
+            font-size: 15px;
+            margin: 10px 30px;
+            cursor: pointer;
+            float: left;
+        }
+        .GFG1 {
+            background-color:inherit;
+            
+            border: 2px solid black;
+            color: rgb(0, 0, 0);
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-table;
+            font-size: 15px;
+            margin: 10px 30px;
+            cursor: pointer;
+            float: right;
+        }
+         </style>
+  
+   </head>
+   <body>
+      
+      <h1> Receptionist Home Page </h1>
+      
+      <div class="main-options">
+         <a href="/receptionist/recephome/addpatient">
+            <br><br><button class="GFG" >
+                <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+                <b>Add Patient</b>
+            </button>
+            
+          
+         </a>
+         <a href="/receptionist/recephome/dequeuegendoc">
+            <br><button class="GFG1">
+                <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+                
+                <b>Remove patient from general doctor queue</b>
+                
+            </button>
+           
+        </a>
+         <a href="/receptionist/recephome/dequeuecsp">
+            <br><br><br><br><br><br><br><button class="GFG1">
+                <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+                
+                <b>Remove Patient from csp doctor queue</b>
+               
+            </button><br><br>
+           
+        </a>
+       
+        <a href="/receptionist/recephome/emergency">
+            <button class="GFG">
+                <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+                
+                <b>Emergency</b>
+               
+            </button><br><br><br><br>
+        
+     </a>
+     <a href="/receptionist/recephome/showqueuecsp">
+        <br><br><button class="GFG">
+            <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+            
+            <b>Show CSP Queue</b>
+           
+           
+        </button><br>
+       
+    </a>
+    <a href="/receptionist/recephome/showqueuegendoc">
+        <button class="GFG1">
+            <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+            
+            <b>Show general doctor queue</b>
+           
+        </button>
+       
+    </a>
+    <a href="/receptionist/recephome/clearappointments"><br><br><br><br><br><br>
+        <button class="GFG">
+            <img src="{% static 'smc.jpg' %}" alt="buttonpng" />
+            
+            <b>Clear all appointments</b>
+           
+        </button><br>
+       
+    </a>
+    
+      
+   
+   </body>
+

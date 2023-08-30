@@ -1,0 +1,55 @@
+<html lang="en">
+{%load static%}
+<head>
+  <link rel="stylesheet" href="index.css">
+
+  <title>queue(child specialist) detail</title>
+  
+</head>
+<style>
+  body{
+    background-image: url("{% static 'background.jpg' %}");
+  }
+</style>
+<body>
+<table>
+<table  border="1";>
+  <tr> 
+      <th>S.no</th>
+      <th>Name</th>
+      <th>doctor name</th>
+      <th>phone number</th>
+  </tr>
+  {% comment %} <tr>
+      <th>Row Header 1</th>
+      <td>Data</td>
+      <td>Data</td>
+      <td>Data</td>
+  </tr> {% endcomment %}
+    {% comment %} <tr> 
+      <th>Row Header 2</th>
+      <td>Data</td>
+      <td>Data</td>
+      <td>Data</td>
+  </tr>
+  <tr> 
+      <th>Row Header 3</th>
+      <td>Data</td>
+      <td>Data</td>
+      <td>Data</td>
+   </tr> {% endcomment %}
+  
+
+{%for k,v in result.items %}
+<tr>
+  <td>{{k}}</td>
+  <td>{{v.patname}}</td>
+  <td>{{v.doc}}</td>
+  <td>{{v.pnum}}</td>
+</tr>
+{% comment %} <p>{{k}} &nbsp {{v.patname}} &nbsp {{v.doc}} &nbsp {{v.pnum}}</P> {% endcomment %}
+{% endfor %}
+</table>
+</body>
+</html> 
+

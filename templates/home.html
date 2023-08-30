@@ -1,0 +1,137 @@
+<html  lang="en" dir="ltr">
+	{%load static %}
+	<head>
+		<meta charset="utf-8">
+		<title>Responsive Navbar</title>
+		<meta name='viewport' content="width=device-width, intial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+        <script src="htpps://kit.fontawesome.com/a076d05399.js" crossorgin="anonymous"></script>
+
+	</head>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			text-decoration:none;
+			list-style-type: style none;;
+			box-sizing:border-box;
+		
+		}
+		body{
+			font-family:montserrat;
+			background-image:url("{% static 'home.jpg' %}");;
+			background-size:120%;
+			background-position:center;
+
+			
+		}
+		nav{background:#0082e6;
+			height:80px;
+			width:100%;
+		}
+		label.logo{
+			color:white;
+			font: size 35px;
+			line-height:80px;
+			padding:0 100px;
+			font-weight:bold;
+		}
+		nav ul{
+			float:right;margin-right:20px;
+		}
+		nav ul li{
+			display:inline-block;line-height:80px;margin:0 5px;
+		}
+		nav ul li a{
+			color:white;font-size:17px;padding:7px 13px;border-radius:3px;text-transform:uppercase;
+		}
+		
+		.checkbtn{
+			font-size:30px;
+			color:white;
+			float:right;
+			line-height:80px;
+			margin: right 40px;cursor:pointer;
+		}
+		#check{
+			display:none;
+		}
+		@media(max-width:952px){
+			label.logo{font-size:30px;
+			padding-left:50px;
+			}
+			nav ul li a{
+					font-size:16px;
+			}
+		}
+		@media (max-width:858px){
+			.checkbtn{
+				display:block;
+			}
+			ul{
+				position:fixed;
+				width:100%;
+				height:100vh;
+				background:#2c3e50;
+				top: 80px;
+				left:0;
+				text-align:center;
+				transition:all .5s;
+		
+			}
+			nav ul li{
+				display:block;
+				margin:50px 0;
+				line-height:30px;
+				overflow: hidden;
+				margin-top: px;
+			}
+			nav ul li a{
+				display: block;
+				float:left;
+				text-align: center;
+				padding: 20px 16px;
+				font-size:20px;
+				width: 100px;
+			}
+			a:hover,a.active{
+				background:none;
+				color:#0082e6;
+			}
+			#check:checked ~ ul{
+				left:0;
+			}
+		}
+		h2,h3{
+			text-align:bottom;
+			color:black;
+			padding:20px;
+			font-family:'Times New Roman';
+			}
+		
+		
+		</style>		
+	<body style="font-size:27px;" >
+		
+
+        
+		<nav>
+            <label><i class="fas fa-bars"></i></label>
+            <label class="logo">SMC CLINIC</label>
+			<ul>
+				<li><a href="/doctor">DOCTOR</a></li>
+				<li><a href="/receptionist">RECEPTIONIST</a></li>
+				<li><a href="/patient">PATIENT</a></li>
+			</ul>
+		</nav>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><h2><p style="text-align:right;">Doctor Details:</p></h2>
+		<h3><p style="text-align:right;">Dr.Vijayalakshmi Sridharan MBBS.,</p></h3>
+		<h3><p style="text-align:right;">Dr.C.Sridharan MBBS.,,DCM,FSMC.,(Child Specialist)</p></h3>
+      	
+     
+		
+	</body>
+</html>
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:url("E:\\depositphotos_96085612-stock-photo-stethoscope-and-data-review.jpg");
+            background-size:100%;
+            background-position: 5px;
+        }
+        div.main{
+            width: 400px;
+            margin: 100px auto 0px auto;
+        
+        }
+        h1{
+            text-align:center;
+            padding:20px;
+            font-family:'Franklin Gothic Medium';
+        }
+        div.register{
+            background-color:rgba(0,0,0,0.5);
+            width:100%;
+            font-size:18px;
+            border-radius:10px;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+            color:#fff;
+        }
+        form#register{
+            margin:40px;
+        }
+        label{
+            font-family:sans-serif;
+            font-size:18px;
+            
+        }
+        input#name{
+            width:300px;
+            border:1px solid #ddd;
+            border-radius:3px;
+            outline:0;
+            padding:7px;
+            background-color:#fff;
+            box-shadow:inset 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        input#submit{
+            width:200px;
+            padding:7px;
+            font-size:16px;
+            font-family:sans-serif;
+            font-weight:600;
+            border:none;
+            background-color: rgba(250,100,0,0.8);
+            color:#fff;
+            cursor:pointer;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        
+        }
+        input#reset{
+            
+            width:200px;
+            padding:7px;
+            font-size:16px;
+            font-family:sans-serif;
+            font-weight:600;
+            border:none;
+            background-color: rgba(250,100,0,0.8);
+            color:#fff;
+            cursor:pointer;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        
+        }
+        label,span,h1{
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+    <title>smc clinic patient form</title>
+</head>
+<body>
+<div class="main">
+<div class="register">
+    
+    <form id="register" method="post" action='/doctor/doctorgendochome/patienthis'>
+    {% csrf_token %}
+    <h1> Search Patient History </h1>
+    
+    {% comment %} <br><br><label for="eorn">Select below option:</label><br>
+    Scheduled-Appointment:<input type="radio" name="eornot" id="eorn"> {% endcomment %}
+    <br><br><label for="pno">Phone number:</label>&nbsp;
+    <input type="phone" name="p_num" id="pno" placeholder="Enter 10-digit phone number of patient whose history is required" required><br>
+    <input type="submit" name="submit" value="submit" id="submit">&nbsp;
+  
+    
+    
+</div><!--end register-->    
+</div><!--end main-->
+    {% comment %} <input type="submit" name="submit" value="submit" id="submit">&nbsp; {% endcomment %}
+    
+   
+
+
+</form>

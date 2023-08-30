@@ -1,0 +1,81 @@
+<html lang="en">
+{% load static%}
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Response window</title>
+      <style>
+         .option {
+    height: 200px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        body {
+            background-image: url("{% static 'background.jpg' %}");
+            background-size:100%;
+            background-position:center;
+            
+        }
+        button{
+          border: black;
+          font-size: medium;
+          cursor: pointer;
+          appearance: none;
+          background-color:yellow;
+            transition: transform .7s ease-in-out;
+          margin-left:10px;
+  
+        }
+        .container{
+
+          position:absolute;
+          left:0;
+          right:0;
+          margin:auto 0;
+        }
+        
+
+      </style>
+   </head>
+   <body>
+    <div class="container">
+    
+     <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+      <tr> 
+          <th>inference,Prescription,Date </th>
+          
+          
+      </tr> 
+
+    
+        {%for i in des%}
+            
+            <tr>
+              <td>{{i}}</td>
+            </tr>   
+               
+             
+                
+            
+            
+        {%endfor%}
+           {% comment %} </table> {% endcomment %}
+        <a href='/doctor/doctorcsphome/prescriptioncsp'>
+          <div class='option'>
+            <button type='submit'><b>Add Prescription</b></button>
+          </div>
+        </a>
+      
+        
+    </div>
+    
+    
+
+      
+      
+    <script src='viwpatienthistory.js'></script>
+    </body>
+</html>

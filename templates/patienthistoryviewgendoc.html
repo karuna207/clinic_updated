@@ -1,0 +1,75 @@
+<html lang="en">
+{% load static%}
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Response window</title>
+      <style>
+         .option {
+    height: 500px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        body {
+            background-image: url("{% static 'prescription.jpg' %}");
+            background-size:100%;
+            background-position:center;
+            
+        }
+        button{
+          border: black;
+          font-size: medium;
+          cursor: pointer;
+          appearance: none;
+          background-color: inherit;
+            transition: transform .7s ease-in-out;
+          margin-left:10px;
+  
+        }
+        
+
+      </style>
+   </head>
+   <body>
+    {% comment %} <div class='des'>
+        {%for i in des%}
+            
+            <li>{{i}}</li>  {% endcomment %}
+            <table border="1">
+                <tr> 
+                    <th>inference,Prescription,Date </th>
+                    
+                    
+                </tr> 
+          
+              
+                  {%for i in des%}
+                      
+                      <tr>
+                        <td>{{i}}</td>
+                      </tr> 
+                
+             
+                
+            
+            
+        {%endfor%}
+        <a href='/doctor/doctorgendochome/prescriptiongendoc'>
+          <div class='load'>
+            <button type='submit'><b>Add Prescription</b></button>
+          </div>
+        </a>
+      
+        
+    </div>
+    
+    
+
+      
+      
+    <script src='viwpatienthistory.js'></script>
+    </body>
+</html>

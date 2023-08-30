@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:url("{% static 'form.jpg' %}");
+            background-size:100%;
+            background-position: 5px;
+        }
+        div.main{
+            width: 500px;
+            margin: 100px auto 0px auto;
+        
+        }
+        h1{
+            text-align:center;
+            padding:20px;
+            font-family:'Franklin Gothic Medium';
+        }
+        div.register{
+            background-color:rgba(0,0,0,0.5);
+            width:100%;
+            font-size:18px;
+            border-radius:10px;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+            color:#fff;
+        }
+        form#register{
+            margin:40px;
+        }
+        label{
+            font-family:sans-serif;
+            font-size:18px;
+            
+        }
+        input#name{
+            width:300px;
+            border:1px solid #ddd;
+            border-radius:3px;
+            outline:0;
+            padding:7px;
+            background-color:#fff;
+            box-shadow:inset 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        input#submit{
+            width:200px;
+            padding:7px;
+            font-size:16px;
+            font-family:sans-serif;
+            font-weight:600;
+            border:none;
+            background-color: rgba(250,100,0,0.8);
+            color:#fff;
+            cursor:pointer;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+            text-align:center;
+        
+        }
+        input#reset{
+            
+            width:200px;
+            padding:7px;
+            font-size:16px;
+            font-family:sans-serif;
+            font-weight:600;
+            border:none;
+            background-color: rgba(250,100,0,0.8);
+            color:#fff;
+            cursor:pointer;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        
+        }
+        label,span,h1{
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+    <title>smc clinic patient form</title>
+</head>
+<body>
+<div class="main">
+<div class="register">
+    <h1>PATIENT APPOINTMENT FORM</h1>
+    <br><br><h2>Doctor Details:</h2>
+	<h3>Dr.Vijayalakshmi Sridharan MBBS.,</h3>
+	<h3>Dr.C.Sridharan MBBS.,,DCM,FSMC.,(Child Specialist)</h3>
+    <form id="register" method="post" action='addpatient'>
+    {% csrf_token %}
+    <label for="name">NAME</label><br>
+    <input type="text" name="p_name" id="name" placeholder="Enter your full name" required><br><br>
+    {% comment %} <label for="age">AGE</label><br>
+    <input type="number" name="p_age" id="age" placeholder="How old are you?" required><br><br>
+    <label for="eid">EMAIL ID</label><br>
+    <input type="email" name="p_emailid" id="eid" placeholder="Enter valid Email-Id"><br><br>
+    <label for="gen">Gender</label><br>
+    Male:<input type="radio" name="p_male" id="gen">&nbsp; Female:<input type="radio" name="p_female" id="gen">&nbsp; Others:<input type="radio" name="p_others" id="gen"> {% endcomment %}
+    {% comment %} <br><br><label for="eorn">Select below option:</label><br>
+    Scheduled-Appointment:<input type="radio" name="eornot" id="eorn"> {% endcomment %}
+    <br><br><label for="pno">Phone number:</label>&nbsp;
+    <input type="phone" name="p_num" id="pno" placeholder="Enter 10-digit phone number" required><br>
+    
+    {% comment %} <br>Write about your symptoms<textarea name="symptoms" rows="2" cols="20"></textarea>
+    <br> {% endcomment %}
+    <br><label for="d_ass">Doctors Available:</label>
+    <select name="doc_ass" id="d_ass">
+        <option value="csp">child specialist</option>
+        <option value="gendoc">general doctor</option>
+    </select><br><br> 
+<!--end main-->
+    <input type="submit" name="submit" value="submit" id="submit">&nbsp;
+    <input type="reset" name="reset" value="reset"  id="reset">
+    
+
+
+</form>
+</div><!--end register-->    
+</div>

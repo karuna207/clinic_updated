@@ -1,0 +1,70 @@
+<html lang="en">
+  {%load static%}
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>smc clinic doctor window</title>
+      <style>
+         .option {
+    height: 500px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.load {
+  height: 50px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+            text-align:center;
+            color:rgb(15, 11, 11);
+            padding:20px;
+            font-family:'Times New Roman';
+        }
+        body {
+            background-image: url("{% static 'doctorhomenewest.jpg' %}");
+            background-size:140%;
+            background-position:center;
+            
+        }
+        button{
+          border: black;
+          font-size: medium;
+          cursor: pointer;
+          appearance: none;
+          background-color:white;
+            transition: transform .7s ease-in-out;
+          margin-left:10px;
+  
+        }
+        
+
+      </style>
+   </head>
+   <body>
+      
+      <h1>Child Specialist Doctor Home </h1>
+      
+         <a href="/doctor/doctorcsphome/patienthis">
+             <div class="load">
+                 <button><b>View Patient History</b></button>
+             </div>
+            
+         </a>
+         <a href='/doctor/doctorcsphome/showcspqueue'>
+            <div class='load'>
+              <button ><b>Show CSP Queue</b></button>
+            </div>
+          </a>
+          <a href='/doctor/doctorcsphome/prescriptioncsp'>
+            <div class='load'>
+              <button ><b>Add Prescription</b></button>
+            </div>
+          </a>
+        
+      </body>
+</html>
